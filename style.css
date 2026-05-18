@@ -68,6 +68,15 @@ footer {
     padding: 20px;
 }
 
+/* ── ICEBERG PHOTO ── */
+.about-card-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+}
+
 /* ── LOCATION PHOTO ── */
 .location-photo-area {
     position: relative;
