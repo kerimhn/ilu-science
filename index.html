@@ -423,6 +423,24 @@ color: var(--aurora-green);
 }
 
 /* ── ABOUT SPLIT ── */
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-photo-col img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 2px;
+}
+
 .about {
 max-width: 1200px;
 margin: 0 auto;
@@ -445,7 +463,6 @@ backdrop-filter: blur(10px);
 padding: 2rem;
 border-radius: 2px;
 }
-
 .about-card-main {
 top: 0; left: 0; right: 0;
 height: 340px;
@@ -456,7 +473,6 @@ justify-content: center;
 overflow: hidden;
 padding: 0;
 }
-
 .about-card-main img {
 width: 100%;
 height: 100%;
@@ -519,6 +535,19 @@ color: var(--glacier);
 }
 
 .about-text .section-body { margin-bottom: 2rem; }
+
+.about-photo {
+  margin-top: 2rem;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.about-photo img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 
 .about-pillars {
 display: flex;
@@ -824,6 +853,8 @@ section { padding: 4rem 1.5rem; }
 .services-header { grid-template-columns: 1fr; gap: 1.5rem; }
 .services-grid { grid-template-columns: 1fr; }
 .about { grid-template-columns: 1fr; gap: 3rem; }
+.about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+.about-photo-col img { height: 280px; }
 .about-visual { height: 300px; }
 .about-card-badge { display: none; }
 .location-inner { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -978,47 +1009,42 @@ Scroll
 
 <!-- ABOUT -->
 <section id="about">
-<div class="about">
-<div class="about-visual">
-<div class="about-card about-card-main">
-<img src="glacier.jpeg" alt="Glacier in Ilulissat, Greenland">
-      </div>
-       <p class="photo-caption">Ilulissat, West Greenland · Photo: Kerim H. Nisancioglu</p>
-</div>
-<div class="about-card about-card-stat">
-<div class="big-num">Local</div>
-<div class="small-label">Founded in Ilulissat</div>
-</div>
-</div>
+<div class="about-inner">
 
-<div class="about-text">
-<p class="section-label">Who we are</p>
-<h2 class="section-title">Based in the Arctic</h2>
-<p class="section-body">Ilulissat Science Service is a local startup founded by a team with deep roots in Greenland's scientific and community life. We endevour to make world-class Arctic research accessible, sustainable, and respectful of this remarkable place.</p>
-<div class="about-pillars">
-<div class="pillar">
-<span class="pillar-icon">🌍</span>
-<div class="pillar-text">
-<strong>Globally connected</strong>
-Extensive experience from international partnerships with universities, research institutes, and science agencies.
-</div>
-</div>
-<div class="pillar">
-<span class="pillar-icon">🤲</span>
-<div class="pillar-text">
-<strong>Community rooted</strong>
-Deep ties to Ilulissat and the broader Greenlandic community — science with and for local people.
-</div>
-</div>
-<div class="pillar">
-<span class="pillar-icon">♻️</span>
-<div class="pillar-text">
-<strong>Environmentally responsible</strong>
-Arctic environments are fragile. We operate with a minimal footprint and maximum respect.
-</div>
-</div>
-</div>
-</div>
+  <div class="about-photo-col">
+    <img src="glacier.jpeg" alt="Glacier in Ilulissat, Greenland">
+    <p class="photo-caption">Ilulissat, West Greenland · Photo: Kerim H. Nisancioglu</p>
+  </div>
+
+  <div class="about-text">
+    <p class="section-label">Who we are</p>
+    <h2 class="section-title">Based in the Arctic</h2>
+    <p class="section-body">Ilulissat Science Service is a local startup founded by a team with deep roots in Greenland's scientific and community life. We endevour to make world-class Arctic research accessible, sustainable, and respectful of this remarkable place.</p>
+    <div class="about-pillars">
+      <div class="pillar">
+        <span class="pillar-icon">🌍</span>
+        <div class="pillar-text">
+          <strong>Globally connected</strong>
+          Extensive experience from international partnerships with universities, research institutes, and science agencies.
+        </div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🤲</span>
+        <div class="pillar-text">
+          <strong>Community rooted</strong>
+          Deep ties to Ilulissat and the broader Greenlandic community — science with and for local people.
+        </div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">♻️</span>
+        <div class="pillar-text">
+          <strong>Environmentally responsible</strong>
+          Arctic environments are fragile. We operate with a minimal footprint and maximum respect.
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 </section>
 
