@@ -1039,32 +1039,26 @@
         </div>
       </div>
     </div>
-    <div class="location-map-area">
-      <!-- Simple Greenland outline SVG -->
-      <svg viewBox="0 0 300 380" class="greenland-svg" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="380" fill="#050f18"/>
-        <!-- Simple Greenland shape -->
-        <path d="M150,20 C170,18 200,25 220,40 C240,55 250,80 255,100 C265,130 260,160 250,185 C240,210 230,230 225,255 C218,280 215,305 205,325 C195,345 180,358 165,365 C150,372 135,370 120,360 C105,350 95,332 88,312 C78,285 75,255 75,228 C72,200 70,175 65,150 C58,120 50,95 55,68 C60,42 75,25 95,20 C108,16 128,20 150,20 Z" fill="rgba(10,42,61,0.8)" stroke="rgba(69,183,209,0.4)" stroke-width="1.5"/>
-        <!-- Ilulissat dot -->
-        <circle cx="100" cy="100" r="5" fill="var(--aurora-green)" opacity="0.9">
-          <animate attributeName="r" values="4;7;4" dur="2.5s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="0.9;0.4;0.9" dur="2.5s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="110" cy="155" r="3" fill="white"/>
-        <!-- Label -->
-        <text x="100" y="105" font-family="DM Mono, monospace" font-size="9" fill="rgba(78,205,196,0.9)" letter-spacing="1">Ilulissat</text>
-        <text x="105" y="100" font-family="DM Mono, monospace" font-size="7" fill="rgba(69,183,209,0.5)">69°13′N</text>
-        <!-- Compass rose simple -->
-        <g transform="translate(255,330)">
-          <circle cx="0" cy="0" r="18" stroke="rgba(69,183,209,0.2)" stroke-width="1" fill="none"/>
-          <line x1="0" y1="-14" x2="0" y2="14" stroke="rgba(69,183,209,0.4)" stroke-width="1"/>
-          <line x1="-14" y1="0" x2="14" y2="0" stroke="rgba(69,183,209,0.4)" stroke-width="1"/>
-          <polygon points="0,-14 -3,-6 3,-6" fill="rgba(78,205,196,0.7)"/>
-          <text x="-2" y="-18" font-family="DM Mono,monospace" font-size="7" fill="rgba(78,205,196,0.7)" text-anchor="middle">N</text>
-        </g>
-      </svg>
+    
+   <!-- PHOTO replacing SVG map -->
+<div>
+  <div class="location-photo-area">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ilulissat_Icefjord%2C_Greenland_%282014%29_-_panoramio.jpg/1280px-Ilulissat_Icefjord%2C_Greenland_%282014%29_-_panoramio.jpg"
+      alt="Icebergs drifting in the Ilulissat Icefjord, Greenland"
+      loading="lazy"
+    >
+    <div class="photo-dot">
+      <div class="dot-ring"></div>
+      <span class="dot-label">Ilulissat · Live</span>
+    </div>
+    <div class="photo-badge">
+      <span class="photo-badge-coords">69°13′N · 51°06′W</span>
+      <span class="photo-badge-label">Ilulissat Icefjord · Disko Bay</span>
     </div>
   </div>
+  <p class="photo-caption">Ilulissat Icefjord, West Greenland · Photo: Wikimedia Commons (CC BY-SA)</p>
+</div>
 </section>
 
 <!-- NGO BANNER -->
