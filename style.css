@@ -70,8 +70,8 @@ footer {
 
 /* ── ICEBERG PHOTO ── */
 .about-card-badge img {
-  width: 100%;
-  height: 100%;
+  width: 10%;
+  height: 10%;
   object-fit: cover;
   object-position: center;
   border-radius: 2px;
@@ -82,12 +82,12 @@ footer {
     position: relative;
     overflow: hidden;
     height: 100px;        /* change to make taller or shorter */
-    border-radius: 8px;
+    border-radius: 2px;
 }
 
 .location-photo-area img {
-    width: 50%;
-    height: 50%;
+    width: 10%;
+    height: 10%;
     object-fit: cover;       /* crops neatly to fill the box */
     object-position: center; /* change to "top" or "bottom" to shift crop */
     display: block;
