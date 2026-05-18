@@ -453,6 +453,14 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    padding: 0;
+  }
+  .about-card-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
   }
 
   .iceberg-mini {
@@ -485,7 +493,8 @@
   .about-card-badge {
     top: 50%; left: -2rem;
     transform: translateY(-50%);
-    height: 360px;
+    width: 160px;
+    height: 120px;
     padding: 0;
     background: rgba(10,34,51,0.95);
     border-color: rgba(69,183,209,0.2);
@@ -971,41 +980,12 @@
   <div class="about">
     <div class="about-visual">
       <div class="about-card about-card-main">
-        <svg class="iceberg-mini" viewBox="0 0 400 300" width="320" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="iceGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="rgba(232,244,248,0.5)"/>
-              <stop offset="100%" stop-color="rgba(69,183,209,0.1)"/>
-            </linearGradient>
-          </defs>
-          <!-- Horizon line -->
-          <line x1="0" y1="180" x2="400" y2="180" stroke="rgba(69,183,209,0.3)" stroke-width="1"/>
-          <!-- Big berg -->
-          <polygon points="100,180 200,40 300,180" fill="url(#iceGrad)" stroke="rgba(232,244,248,0.4)" stroke-width="1.5"/>
-          <polygon points="100,180 140,100 200,60 185,80 155,140" fill="rgba(255,255,255,0.06)"/>
-          <!-- Small bergs -->
-          <polygon points="310,178 345,148 375,178" fill="rgba(184,220,232,0.2)" stroke="rgba(184,220,232,0.3)" stroke-width="1"/>
-          <polygon points="20,179 55,162 80,179" fill="rgba(184,220,232,0.15)" stroke="rgba(184,220,232,0.25)" stroke-width="1"/>
-          <!-- Water -->
-          <ellipse cx="200" cy="185" rx="170" ry="6" stroke="rgba(69,183,209,0.2)" stroke-width="1" fill="none"/>
-          <ellipse cx="200" cy="195" rx="210" ry="8" stroke="rgba(69,183,209,0.1)" stroke-width="1" fill="none"/>
-          <!-- Stars in sky -->
-          <circle cx="50" cy="40" r="1" fill="rgba(255,255,255,0.6)"/>
-          <circle cx="130" cy="20" r="1.2" fill="rgba(255,255,255,0.5)"/>
-          <circle cx="260" cy="30" r="0.8" fill="rgba(255,255,255,0.7)"/>
-          <circle cx="340" cy="15" r="1" fill="rgba(255,255,255,0.5)"/>
-          <circle cx="380" cy="55" r="0.8" fill="rgba(255,255,255,0.4)"/>
-          <!-- Aurora -->
-          <path d="M0,80 Q100,60 200,75 Q300,90 400,70" stroke="rgba(78,205,196,0.3)" stroke-width="20" fill="none" filter="url(#blur)"/>
-        </svg>
+        <img src="glacier.jpeg" alt="Glacier in Ilulissat, Greenland">
       </div>
       <div class="about-card about-card-stat">
         <div class="big-num">Local</div>
         <div class="small-label">Founded in Ilulissat</div>
       </div>
-     <div class="about-card about-card-badge">
-       <img src="glacier.jpeg" alt="Arctic Research">
-     </div>
     </div>
 
     <div class="about-text">
