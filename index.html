@@ -485,11 +485,20 @@
   .about-card-badge {
     top: 50%; left: -2rem;
     transform: translateY(-50%);
-    width: 10px;
-    padding: 1.2rem;
+    width: 160px;
+    height: 120px;
+    padding: 0;
     background: rgba(10,34,51,0.95);
     border-color: rgba(69,183,209,0.2);
     text-align: center;
+    overflow: hidden;
+  }
+  .about-card-badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
   }
   .about-card-badge .badge-icon { font-size: 1.4rem; margin-bottom: 0.4rem; }
   .about-card-badge .badge-text {
@@ -551,6 +560,29 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+  }
+
+  /* ── LOCATION PHOTO ── */
+  .location-photo-area {
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  .location-photo-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  .photo-caption {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 0.6rem;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.08em;
   }
 
   .map-placeholder {
@@ -1047,6 +1079,7 @@
       alt="Icebergs drifting in the Ilulissat Icefjord, Greenland"
       loading="lazy"
     >
+  </div>
   <p class="photo-caption">Ilulissat, West Greenland · Photo: Kerim H. Nisancioglu</p>
 </div>
 </section>
