@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The People · Ilulissat Science Service</title>
+<meta name="description" content="The people behind Ilulissat Science Service — Kerim Hestnes Nisancioglu and Palle Jerimiassen.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+--ice: #e8f4f8;
+--glacier: #b8dce8;
+--deep: #0a2a3d;
+--ocean: #1a4a6b;
+--aurora-green: #4ecdc4;
+--aurora-blue: #45b7d1;
+--aurora-purple: #a29bfe;
+--warm: #f5e6c8;
+--text: #0d1f2d;
+--muted: #5a7a8a;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+font-family: 'DM Sans', sans-serif;
+background: var(--deep);
+color: var(--ice);
+overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+position: fixed;
+top: 0; left: 0; right: 0;
+z-index: 100;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1.2rem 3rem;
+background: linear-gradient(to bottom, rgba(10,42,61,0.95), transparent);
+backdrop-filter: blur(2px);
+}
+.nav-logo {
+font-family: 'DM Mono', monospace;
+font-size: 0.75rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(--glacier);
+line-height: 1.4;
+text-decoration: none;
+}
+.nav-logo strong {
+font-family: 'Playfair Display', serif;
+font-size: 1.1rem;
+font-weight: 700;
+color: white;
+display: block;
+letter-spacing: 0.05em;
+}
+.nav-links {
+display: flex;
+gap: 2.5rem;
+list-style: none;
+}
+.nav-links a {
+font-size: 0.8rem;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: var(--glacier);
+text-decoration: none;
+transition: color 0.3s;
+}
+.nav-links a:hover { color: white; }
+.nav-links a.active { color: white; }
+.nav-cta {
+font-size: 0.78rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(--deep);
+background: var(--aurora-green);
+padding: 0.55rem 1.4rem;
+border-radius: 2px;
+text-decoration: none;
+font-weight: 500;
+transition: background 0.3s, transform 0.2s;
+}
+.nav-cta:hover { background: white; transform: translateY(-1px); }
+
+/* ── PAGE HEADER ── */
+.page-head {
+position: relative;
+min-height: 62vh;
+display: flex;
+align-items: flex-end;
+overflow: hidden;
+}
+.page-head-bg {
+position: absolute;
+inset: 0;
+background:
+radial-gradient(ellipse 80% 60% at 65% 25%, rgba(69,183,209,0.15) 0%, transparent 60%),
+radial-gradient(ellipse 50% 70% at 15% 80%, rgba(78,205,196,0.1) 0%, transparent 50%),
+linear-gradient(170deg, #061624 0%, #0a2a3d 45%, #0d3352 100%);
+}
+/* Aurora strips */
+.aurora {
+position: absolute;
+top: 0; left: 0; right: 0;
+height: 50%;
+overflow: hidden;
+pointer-events: none;
+}
+.aurora-band {
+position: absolute;
+width: 140%;
+left: -20%;
+border-radius: 100%;
+filter: blur(18px);
+animation: aurora-drift 8s ease-in-out infinite alternate;
+}
+.aurora-band:nth-child(1) { top: 14%; background: var(--aurora-green); height: 60px; opacity: 0.25; animation-duration: 9s; }
+.aurora-band:nth-child(2) { top: 26%; background: var(--aurora-blue); height: 40px; opacity: 0.18; animation-delay: 2s; animation-duration: 11s; }
+.aurora-band:nth-child(3) { top: 38%; background: var(--aurora-purple); height: 30px; opacity: 0.12; animation-delay: 4s; animation-duration: 7s; }
+@keyframes aurora-drift {
+from { transform: translateX(0) skewY(-1deg); opacity: 0.1; }
+to   { transform: translateX(8%) skewY(1deg); opacity: 0.3; }
+}
+.stars {
+position: absolute;
+inset: 0;
+background-image:
+radial-gradient(1px 1px at 10% 12%, rgba(255,255,255,0.7) 0%, transparent 100%),
+radial-gradient(1px 1px at 25% 8%, rgba(255,255,255,0.5) 0%, transparent 100%),
+radial-gradient(1px 1px at 40% 20%, rgba(255,255,255,0.8) 0%, transparent 100%),
+radial-gradient(1px 1px at 55% 5%, rgba(255,255,255,0.4) 0%, transparent 100%),
+radial-gradient(1px 1px at 70% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+radial-gradient(1px 1px at 85% 10%, rgba(255,255,255,0.5) 0%, transparent 100%),
+radial-gradient(1px 1px at 15% 30%, rgba(255,255,255,0.3) 0%, transparent 100%),
+radial-gradient(1px 1px at 33% 35%, rgba(255,255,255,0.5) 0%, transparent 100%),
+radial-gradient(1px 1px at 63% 28%, rgba(255,255,255,0.4) 0%, transparent 100%),
+radial-gradient(2px 2px at 5% 22%, rgba(255,255,255,0.4) 0%, transparent 100%),
+radial-gradient(2px 2px at 48% 14%, rgba(255,255,255,0.5) 0%, transparent 100%),
+radial-gradient(1.5px 1.5px at 91% 25%, rgba(255,255,255,0.4) 0%, transparent 100%);
+}
+.page-head-content {
+position: relative;
+z-index: 10;
+padding: 0 3rem 4.5rem;
+max-width: 720px;
+animation: fade-up 1.2s ease both;
+}
+@keyframes fade-up {
+from { opacity: 0; transform: translateY(30px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+.head-eyebrow {
+font-family: 'DM Mono', monospace;
+font-size: 0.72rem;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(--aurora-green);
+margin-bottom: 1.2rem;
+}
+.page-head h1 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+font-weight: 900;
+line-height: 1.06;
+margin-bottom: 1.4rem;
+}
+.page-head h1 em { font-style: italic; color: var(--aurora-blue); }
+.head-sub {
+font-size: 1.05rem;
+font-weight: 300;
+line-height: 1.75;
+color: var(--glacier);
+max-width: 560px;
+}
+
+/* ── PARTNERSHIP STRIP ── */
+.partner-strip {
+background: rgba(255,255,255,0.04);
+border-top: 1px solid rgba(184,220,232,0.1);
+border-bottom: 1px solid rgba(184,220,232,0.1);
+padding: 2rem 3rem;
+display: flex;
+justify-content: center;
+gap: 4rem;
+flex-wrap: wrap;
+text-align: center;
+}
+.partner-item .label {
+font-family: 'DM Mono', monospace;
+font-size: 0.65rem;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 0.35rem;
+}
+.partner-item .val {
+font-family: 'Playfair Display', serif;
+font-size: 1.4rem;
+font-weight: 700;
+color: var(--aurora-blue);
+line-height: 1.1;
+}
+
+/* ── TEAM ── */
+.team {
+max-width: 1140px;
+margin: 0 auto;
+}
+section { padding: 6rem 3rem; }
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 0.68rem;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(--aurora-green);
+margin-bottom: 1rem;
+}
+
+.profile {
+display: grid;
+grid-template-columns: 0.85fr 1.15fr;
+gap: 4rem;
+align-items: center;
+}
+.profile + .profile { margin-top: 6rem; padding-top: 6rem; border-top: 1px solid rgba(184,220,232,0.1); }
+.profile.reverse .portrait { order: 2; }
+
+/* Portrait — gradient card with monogram. Swap for a photo: see note below. */
+.portrait {
+position: relative;
+height: 440px;
+border-radius: 2px;
+overflow: hidden;
+background: linear-gradient(135deg, #0d3352 0%, #0a2233 100%);
+border: 1px solid rgba(184,220,232,0.12);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.portrait::before {
+content: '';
+position: absolute;
+top: 0; left: 0; right: 0;
+height: 2px;
+background: linear-gradient(90deg, var(--aurora-green), var(--aurora-blue));
+z-index: 3;
+}
+.portrait img {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+display: block;
+z-index: 0;
+}
+/* Legibility scrim behind the caption when a photo is present */
+.portrait.has-photo::after {
+content: '';
+position: absolute;
+inset: 0;
+background: linear-gradient(to top, rgba(5,15,24,0.85) 0%, rgba(5,15,24,0.25) 22%, transparent 45%);
+z-index: 1;
+pointer-events: none;
+}
+.portrait .monogram {
+font-family: 'Playfair Display', serif;
+font-size: 6rem;
+font-weight: 900;
+color: rgba(184,220,232,0.18);
+letter-spacing: 0.05em;
+}
+.portrait .portrait-tag {
+position: absolute;
+bottom: 1.1rem;
+left: 1.2rem;
+right: 1.2rem;
+z-index: 2;
+font-family: 'DM Mono', monospace;
+font-size: 0.62rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: rgba(232,244,248,0.85);
+text-shadow: 0 1px 6px rgba(5,15,24,0.7);
+}
+
+.profile-eyebrow {
+font-family: 'DM Mono', monospace;
+font-size: 0.66rem;
+letter-spacing: 0.22em;
+text-transform: uppercase;
+color: var(--aurora-green);
+margin-bottom: 0.9rem;
+}
+.profile-name {
+font-family: 'Playfair Display', serif;
+font-size: clamp(1.8rem, 3vw, 2.4rem);
+font-weight: 700;
+line-height: 1.1;
+color: white;
+margin-bottom: 0.5rem;
+}
+.profile-role {
+font-size: 0.95rem;
+font-weight: 400;
+color: var(--glacier);
+margin-bottom: 1.6rem;
+}
+.profile-bio p {
+font-size: 1rem;
+font-weight: 300;
+line-height: 1.8;
+color: var(--glacier);
+margin-bottom: 1.1rem;
+}
+.profile-bio p:last-child { margin-bottom: 0; }
+
+.cred-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 0.6rem;
+margin-top: 1.8rem;
+}
+.cred-tag {
+font-family: 'DM Mono', monospace;
+font-size: 0.62rem;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(--glacier);
+background: rgba(255,255,255,0.04);
+border: 1px solid rgba(184,220,232,0.14);
+padding: 0.4rem 0.8rem;
+border-radius: 2px;
+}
+
+/* ── CLOSING ── */
+.closing {
+background: rgba(255,255,255,0.02);
+text-align: center;
+}
+.closing-inner { max-width: 640px; margin: 0 auto; }
+.closing h2 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+font-weight: 700;
+line-height: 1.15;
+margin-bottom: 1.2rem;
+}
+.closing p {
+font-size: 1rem;
+font-weight: 300;
+line-height: 1.8;
+color: var(--glacier);
+margin-bottom: 2rem;
+}
+.btn-primary {
+display: inline-block;
+padding: 0.85rem 2rem;
+background: var(--aurora-green);
+color: var(--deep);
+font-size: 0.82rem;
+font-weight: 500;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+text-decoration: none;
+border-radius: 2px;
+transition: background 0.3s, transform 0.2s;
+}
+.btn-primary:hover { background: white; transform: translateY(-2px); }
+.btn-ghost {
+display: inline-block;
+padding: 0.85rem 2rem;
+border: 1px solid rgba(184,220,232,0.4);
+color: var(--glacier);
+font-size: 0.82rem;
+font-weight: 400;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+text-decoration: none;
+border-radius: 2px;
+transition: border-color 0.3s, color 0.3s;
+margin-left: 0.6rem;
+}
+.btn-ghost:hover { border-color: white; color: white; }
+
+/* ── FOOTER ── */
+footer {
+background: #050f18;
+padding: 3rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 1.5rem;
+border-top: 1px solid rgba(184,220,232,0.06);
+}
+.footer-logo {
+font-family: 'Playfair Display', serif;
+font-size: 1rem;
+font-weight: 700;
+color: rgba(184,220,232,0.6);
+}
+.footer-links { display: flex; gap: 2rem; list-style: none; }
+.footer-links a {
+font-size: 0.75rem;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: rgba(184,220,232,0.4);
+text-decoration: none;
+transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--glacier); }
+.footer-copy {
+font-family: 'DM Mono', monospace;
+font-size: 0.65rem;
+letter-spacing: 0.1em;
+color: rgba(184,220,232,0.25);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+nav { padding: 1rem 1.5rem; }
+.nav-links { display: none; }
+section { padding: 4rem 1.5rem; }
+.page-head-content { padding: 0 1.5rem 3.5rem; }
+.partner-strip { gap: 2.5rem; padding: 2rem 1.5rem; }
+.profile { grid-template-columns: 1fr; gap: 2.5rem; }
+.profile.reverse .portrait { order: 0; }
+.profile + .profile { margin-top: 4rem; padding-top: 4rem; }
+.portrait { height: 320px; }
+.btn-ghost { margin-left: 0; margin-top: 0.8rem; }
+footer { flex-direction: column; align-items: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+.aurora-band { animation: none; }
+.page-head-content { animation: none; }
+html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+<a href="index.html" class="nav-logo">
+<strong>Ilulissat Science Service</strong>
+Greenland · 69°N
+</a>
+<ul class="nav-links">
+<li><a href="index.html#services">Services</a></li>
+<li><a href="index.html#about">About</a></li>
+<li><a href="team.html" class="active">People</a></li>
+<li><a href="index.html#location">Location</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+<a href="index.html#contact" class="nav-cta">Get in Touch</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-head">
+<div class="page-head-bg"></div>
+<div class="stars"></div>
+<div class="aurora">
+<div class="aurora-band"></div>
+<div class="aurora-band"></div>
+<div class="aurora-band"></div>
+</div>
+<div class="page-head-content">
+<p class="head-eyebrow">The people behind the science</p>
+<h1>Science <em>and</em><br>local roots</h1>
+<p class="head-sub">Ilulissat Science Service is built by two people who know this place from very different angles — a community leader who has helped shape Ilulissat for three decades, and a climate scientist who has studied its ice for two.</p>
+</div>
+</header>
+
+<!-- PARTNERSHIP STRIP -->
+<div class="partner-strip">
+<div class="partner-item">
+<div class="label">Founding partner</div>
+<div class="val">Ilulissat · 69°N</div>
+</div>
+<div class="partner-item">
+<div class="label">Founding partner</div>
+<div class="val">Bergen · 60°N</div>
+</div>
+<div class="partner-item">
+<div class="label">Established as</div>
+<div class="val">I/S Partnership</div>
+</div>
+</div>
+
+<!-- TEAM -->
+<section>
+<div class="team">
+
+  <!-- Palle -->
+  <div class="profile">
+    <div class="portrait has-photo">
+      <span class="monogram">PJ</span>
+      <img src="palle.jpg" alt="Palle Jerimiassen above Ilulissat, Disko Bay" style="object-position: 56% center;">
+      <span class="portrait-tag">Palle Jerimiassen · Ilulissat</span>
+    </div>
+    <div class="profile-text">
+      <p class="profile-eyebrow">Community &amp; local logistics</p>
+      <h2 class="profile-name">Palle Jerimiassen</h2>
+      <p class="profile-role">Co-founder · Former Mayor of Avannaata Kommunia · Founder, Event Ilulissat</p>
+      <div class="profile-bio">
+        <p>A co-founder of Ilulissat Science Service, Palle brings deep local roots and a lifetime of navigating the Arctic landscape to every project. His approach to field logistics and support is built on professionalism, safety, and a profound respect for the extreme environment in which the team operates.</p>
+        <p>His career in public leadership — eight years as Mayor and thirty years on the municipal council — means he is used to managing complex processes and keeping a clear overview, whether the task is logistics for a scientific expedition, a film production, or an exclusive professional visit. That experience is paired with the practical skills the Arctic demands: a certified skipper for 12-passenger operations, holding LRC/ROC radio certificates, and a seasoned Arctic outfitter equally at home in ice-filled waters and at remote field camps.</p>
+        <p>Palle believes the best results come from strong partnerships and local anchoring. The goal at Ilulissat Science Service is not simply to provide a service, but to act as your extended arm in the field — so you can focus entirely on your mission, be it research, communication, or documentation. Alongside this work he runs Event Ilulissat, delivering authentic, high-end professional experiences.</p>
+      </div>
+      <div class="cred-tags">
+        <span class="cred-tag">Certified skipper · 12-pax</span>
+        <span class="cred-tag">LRC/ROC radio</span>
+        <span class="cred-tag">Arctic outfitter</span>
+        <span class="cred-tag">8 yrs Mayor · 30 yrs council</span>
+        <span class="cred-tag">Event Ilulissat</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kerim -->
+  <div class="profile reverse">
+    <div class="portrait has-photo">
+      <span class="monogram">KN</span>
+      <img src="kerim.jpg" alt="Kerim Hestnes Nisancioglu during ice-core fieldwork in Greenland" style="object-position: center;">
+      <span class="portrait-tag">Kerim Hestnes Nisancioglu · EastGRIP, Greenland ice sheet</span>
+    </div>
+    <div class="profile-text">
+      <p class="profile-eyebrow">Science &amp; research</p>
+      <h2 class="profile-name">Kerim Hestnes Nisancioglu</h2>
+      <p class="profile-role">Professor of Climate Dynamics, University of Bergen · Bjerknes Centre for Climate Research</p>
+      <div class="profile-bio">
+        <p>Kerim is a climate scientist who has spent more than two decades studying the dynamics of the Arctic — past, present, and future — with a particular focus on the Greenland Ice Sheet and the fast-flowing glaciers of Disko Bay, including Sermeq Kujalleq at Ilulissat. He earned his PhD at MIT and is Professor II at the University of Oslo alongside his position in Bergen.</p>
+        <p>He led ice2ice, one of the largest European climate research projects in the Nordic countries, connecting changes in Arctic sea ice to the stability of Greenland's ice. He founded the international ACDC summer school, and works deliberately at the meeting point of science, art, and education — bringing climate knowledge out of the lab and into the communities living closest to the ice.</p>
+      </div>
+      <div class="cred-tags">
+        <span class="cred-tag">Climate Dynamics</span>
+        <span class="cred-tag">PhD, MIT</span>
+        <span class="cred-tag">University of Bergen</span>
+        <span class="cred-tag">Bjerknes Centre</span>
+        <span class="cred-tag">Greenland fieldwork</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+<div class="closing-inner">
+<p class="section-label">Two worlds, one place</p>
+<h2>World-class science, rooted in the community it serves</h2>
+<p>Together we connect international Arctic research with the people, knowledge, and infrastructure of Ilulissat — so that science done here strengthens both our understanding of a changing planet and the community at the ice edge.</p>
+<a href="index.html#contact" class="btn-primary">Plan your research</a>
+<a href="index.html#about" class="btn-ghost">← Back to About</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-logo">Ilulissat Science Service</div>
+<ul class="footer-links">
+<li><a href="index.html#services">Services</a></li>
+<li><a href="index.html#about">About</a></li>
+<li><a href="team.html">People</a></li>
+<li><a href="https://illu.gl" target="_blank" rel="noopener">ILLU NGO</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
+<div class="footer-copy">© 2025 Ilulissat Science Service · 69°13′N</div>
+</footer>
+
+</body>
+</html>
